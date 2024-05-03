@@ -1,0 +1,86 @@
+body {
+  background-color: #DDD;
+  background-color: #222;
+  /* color: white; */
+}
+
+.card {
+  background-color: #000;
+  color: white;
+}
+
+.swal-button--confirmButtonText {
+  background-color: red;
+  transition: .2s;
+}
+
+.swal-button--confirmButtonText:hover {
+  background-color: rgb(177, 10, 10) !important;
+}
+
+/* Loader Style */
+.lds-hourglass {
+
+  background-color: #ddddddc7;
+  width: 200px;
+  height: 200px;
+  border-radius: 6px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px #DDD;
+}
+
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 35px solid #fff;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+.loader.hide {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+  #logged-btns{
+    text-align: center;
+    margin: 10px 0;
+    gap: 10px;
+  }
+  #logout-btn {
+    justify-content: center;
+    margin: 10px 0;
+
+  }
+}
